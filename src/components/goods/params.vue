@@ -21,11 +21,11 @@
           <el-cascader
             v-model="selectdCateKeys"
             :options="catelist"
-            expand-trigger="hover"
+            props.expandTrigger="hover"
             :props="cateProps"
             @change="handleChanged"
             clearable
-            change-on-select
+            props.checkStrictly
           ></el-cascader>
         </el-col>
       </el-row>
@@ -47,8 +47,7 @@
               <template slot-scope="scope">
                 <el-tag
                   v-for="(it, index) in scope.row.attr_vals"
-                  :key="index"
-                  closable
+                  :key="index" closable
                   @close="handleClose(index, scope.row)"
                   >{{ it }}
                 </el-tag>

@@ -90,11 +90,11 @@
           <el-cascader
             v-model="selectdKeys"
             :options="parentCateList"
-            expand-trigger="hover"
+            props.expandTrigger="hover"
             :props="cascaderProps"
             @change="parentCateChanged"
             clearable
-            change-on-select
+            props.checkStrictly
           ></el-cascader>
         </el-form-item>
       </el-form>
